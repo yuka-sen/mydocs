@@ -1,0 +1,16 @@
+{
+  "name": "mydoc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://gitee.com/fajuan/mydoc.git",
+  "author": "yuka <yukayu@yeahka.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs && cp -rf docs/.vitepress/dist/** .",
+    "serve": "vitepress serve docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.0.0-alpha.13"
+  }
+}
