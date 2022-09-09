@@ -1,3 +1,4 @@
 module.exports = {
-    title: '笔记'
+    title: '笔记',
+    base: '/mydoc/'
 }
