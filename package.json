@@ -8,7 +8,8 @@
   "scripts": {
     "dev": "vitepress dev docs",
     "build": "vitepress build docs && cp -rf docs/.vitepress/dist/** .",
-    "serve": "vitepress serve docs"
+    "serve": "vitepress serve docs",
+    "update":"yarn build && git add . && git commit -m\"docs: update\" && git push"
   },
   "devDependencies": {
     "vitepress": "^1.0.0-alpha.13"
