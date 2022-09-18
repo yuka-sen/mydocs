@@ -65,7 +65,7 @@
 - Etag/If-None-Match（优先级更高）：Etag的值事服务器发给前端的缓存验证码，再次请求相同资源时请求头中的If-None-Match的值就等于Etag并发送给服务器
 - Last-Modify/If-Modify-Since：Last-modify是一个时间标识该资源的最后修改时间。当浏览器再次请求该资源时，request的请求头中会包含If-Modify-Since，该值为缓存之前返回的Last-Modify。服务器收到If-Modify-Since后，根据资源的最后修改时间判断是否命中缓存。
 
-#### vite和webpack的区别
+## vite和webpack的区别
 - 1.webpack冷启动需要将所有的文件进行一个编译、打包，这个过程是一个非常耗时的过程。而vite是利用了现代浏览器支持esmodule的特点，在冷启动的过程中，根据浏览器的请求动态传输所需要的资源文件。
 - 2.在热更新的过程中，webpack是通过返回给 hmr runtime 一个mainfest的文件和更新的chuck.js，重新生成依赖关系，更新新模块。但是vite则不需要这个编译和重新分析依赖关系的过程，节省了时间。
 - 3.webpack需要复杂的配置的工作，而vite内部会默认集成很多功能，是一个开箱即用的工具
