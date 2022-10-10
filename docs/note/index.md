@@ -69,4 +69,40 @@
 - 1.webpack冷启动需要将所有的文件进行一个编译、打包，这个过程是一个非常耗时的过程。而vite是利用了现代浏览器支持esmodule的特点，在冷启动的过程中，根据浏览器的请求动态传输所需要的资源文件。
 - 2.在热更新的过程中，webpack是通过返回给 hmr runtime 一个mainfest的文件和更新的chuck.js，重新生成依赖关系，更新新模块。但是vite则不需要这个编译和重新分析依赖关系的过程，节省了时间。
 - 3.webpack需要复杂的配置的工作，而vite内部会默认集成很多功能，是一个开箱即用的工具
+  
+## 前端性能指标与优化方法
+### 常见性能指标
+- first paint
+- first content paint
+- largest content paint
+- first input delay
+- Cumulative Layout Shift
+- Time to First Byte
+### 优化方法：
+  #### 1.加快资源加载时间 ：
+  - dns静态资源部署 
+  - HTTP 压缩：服务器对资源文件包进行压缩 
+  - 前端打包工具压缩 和 Tree Shaking
+  - 减少http请求
+  - 使用 dns-prefetch 减少 DNS 的查询时间
+  - 使用 preconnect 提前建立连接
+  - 使用 preload / prefetch 预先加载资源
+  #### 2.加快资源渲染时间 ：
+  - 减少阻塞渲染的因素（html节点数尽量少、节点嵌套深度尽量不要太深、css样式嵌套不易过深）
+  - 图片懒加载 骨架屏 
+  - 服务端渲染
+  - 预渲染
+#### 3.交互层面 ：
+- 减少页面的回流重绘
+- 防抖节流
+- 虚拟列表
+- web worker
+- 大文件分片上传
+#### 4.Vue 项目的优化 ：
+- 使用v-show和v-once 、v-memo 减少页面组件重复渲染
+- v-for使用独一无二的key值
+- 路由懒加载 第三方库按需引入 
+- 及时清除组件中的副作用
+
+
 
