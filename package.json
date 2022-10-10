@@ -6,9 +6,9 @@
   "author": "yuka <yukayu@yeahka.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "vitepress dev docs",
-    "build": "vitepress build docs && cp -rf docs/.vitepress/dist/** .",
-    "serve": "vitepress serve docs",
+    "dev": "vitepress dev src",
+    "build": "vitepress build src",
+    "serve": "vitepress serve src",
     "update":"yarn build && git add . && git commit -m\"docs: update\" && git push"
   },
   "devDependencies": {
