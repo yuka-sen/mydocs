@@ -1,8 +1,8 @@
 {
-  "name": "yuka-sen",
+  "name": "mydocs",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://gitee.com/fajuan/mydoc.git",
+  "repository": "https://gitee.com/fajuan/mydocs.git",
   "author": "yuka <yukayu@yeahka.com>",
   "license": "MIT",
   "scripts": {
